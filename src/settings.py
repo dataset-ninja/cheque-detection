@@ -21,7 +21,7 @@ HIDE_DATASET = False  # set False when 100% sure about repo quality
 # * After uploading to instance ##
 ##################################
 LICENSE: License = License.Unknown()
-APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Security(),Domain.OCR()]
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Security(), Domain.OCR()]
 CATEGORY: Category = Category.Security()
 
 CV_TASKS: List[CVTask] = [CVTask.ObjectDetection()]
@@ -43,7 +43,7 @@ GITHUB_URL: str = "https://github.com/dataset-ninja/cheque-detection"
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = ["https://www.kaggle.com/datasets/pranav10000/chequedetection"]
+DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = "https://www.kaggle.com/datasets/pranav10000/chequedetection"
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
@@ -57,6 +57,8 @@ REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {"GitHub":"https:/
 
 CITATION_URL: Optional[str] = "https://link.springer.com/chapter/10.1007/978-3-319-69900-4_83"
 AUTHORS: Optional[List[str]] = ["Prabhat Dansena", "Soumen Bag", "Rajarshi Pal"]
+AUTHORS_CONTACTS: Optional[List[str]] = ["p.dansena23@gmail.com", "bagsoumen@gmail.com"]
+
 
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = ["Indian Institute of Technology", "Institute for Development and Research in Banking Technology, India"]
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = ["https://home.iitd.ac.in/", "https://www.idrbt.ac.in/"]
@@ -110,6 +112,7 @@ def get_settings():
     settings["repository"] = REPOSITORY
     settings["citation_url"] = CITATION_URL
     settings["authors"] = AUTHORS
+    settings["authors_contacts"] = AUTHORS_CONTACTS
     settings["organization_name"] = ORGANIZATION_NAME
     settings["organization_url"] = ORGANIZATION_URL
     settings["slytagsplit"] = SLYTAGSPLIT
